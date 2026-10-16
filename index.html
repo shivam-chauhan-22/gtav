@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAAPLAY | Ultimate Gaming Portal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090a0f',
+                        cardBg: '#11131c',
+                        neonGreen: '#00ff87',
+                        neonCyan: '#60efff',
+                        neonPurple: '#7928ca',
+                    },
+                    fontFamily: {
+                        sans: ['Rajdhani', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Font Rajdhani for Gaming Aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #090a0f;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(121, 40, 202, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(0, 255, 135, 0.08) 0%, transparent 40%);
+        }
+        /* Cyber Grid Background Effect */
+        .cyber-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        /* Neon Glow Utility Effects */
+        .neon-glow-btn {
+            box-shadow: 0 0 15px rgba(0, 255, 135, 0.4), inset 0 0 10px rgba(0, 255, 135, 0.2);
+        }
+        .neon-glow-btn:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 135, 0.8), 0 0 40px rgba(96, 239, 255, 0.5);
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 25px rgba(121, 40, 202, 0.4), 0 0 15px rgba(0, 255, 135, 0.2);
+            border-color: rgba(0, 255, 135, 0.6);
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen flex flex-col justify-between cyber-grid selection:bg-neonGreen selection:text-black">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-darkBg/80 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Branding Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-neonPurple to-neonGreen p-0.5 shadow-lg shadow-neonPurple/30 group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-darkBg rounded-[10px] flex items-center justify-center">
+                        <i class="fa-solid fa-gamepad text-neonGreen text-xl"></i>
+                    </div>
+                </div>
+                <span class="text-3xl font-extrabold tracking-wider bg-gradient-to-r from-neonGreen via-neonCyan to-neonPurple bg-clip-text text-transparent italic">
+                    AAAPLAY<span class="text-white text-xl"></span>
+                </span>
+            </a>
+
+            <!-- Portal Badge -->
+            <div class="flex items-center space-x-3">
+                <div class="hidden sm:flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold tracking-wider text-slate-300">
+                    <span class="w-2.5 h-2.5 rounded-full bg-neonGreen animate-pulse"></span>
+                    <span>SERVER ONLINE</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <!-- Hero Section -->
+        <section class="text-center py-8 mb-10 space-y-4">
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight uppercase italic">
+                LAUNCH YOUR <span class="bg-gradient-to-r from-neonGreen to-neonCyan bg-clip-text text-transparent">FAVORITE GAMES</span>
+            </h1>
+            <p class="text-slate-400 max-w-xl mx-auto text-lg font-medium">
+                Instant access to popular AAA titles and gaming hubs with one click.
+            </p>
+        </section>
+
+        <!-- Games Grid Section -->
+        <section class="mb-16">
+            <div class="flex items-center space-x-3 mb-8 border-b border-white/10 pb-4">
+                <i class="fa-solid fa-fire text-neonGreen text-xl"></i>
+                <h2 class="text-2xl font-bold tracking-wider uppercase text-slate-200">Featured Title</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Primary Game Card: GTA V -->
+                <div class="bg-cardBg rounded-2xl border border-white/10 overflow-hidden card-glow transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group relative">
+                    <!-- GTA V Official Poster -->
+                    <div class="relative h-96 overflow-hidden bg-black/60">
+                        <img 
+                            src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" 
+                            alt="Grand Theft Auto V Poster" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/400x600/11131c/00ff87?text=GTA+V+Poster'"
+                        >
+                        <!-- Dark Overlay gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                        
+                        <!-- Top Tag -->
+                        <div class="absolute top-3 left-3 bg-red-600/90 text-white font-bold text-xs px-2.5 py-1 rounded-md tracking-wider">
+                            POPULAR
+                        </div>
+                    </div>
+
+                    <!-- Details & Launcher Button -->
+                    <div class="p-6 space-y-4 -mt-6 relative z-10 bg-cardBg">
+                        <div>
+                            <h3 class="text-2xl font-extrabold uppercase tracking-wide text-white group-hover:text-neonGreen transition-colors">
+                                Grand Theft Auto V
+                            </h3>
+                            <p class="text-slate-400 text-sm font-medium">Action / Open World</p>
+                        </div>
+
+                        <!-- PLAY BUTTON (Redirects to https://fiveplay.lol/) -->
+                        <a 
+                            href="https://fiveplay.lol/" 
+                            class="w-full py-3.5 rounded-xl bg-neonGreen text-black font-extrabold text-xl uppercase tracking-widest flex items-center justify-center space-x-2 neon-glow-btn transition-all duration-300 transform active:scale-95"
+                        >
+                            <i class="fa-solid fa-play text-lg"></i>
+                            <span>PLAY</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Placeholder Card 1: GTA VI -->
+                <div class="bg-cardBg/50 rounded-2xl border border-white/5 overflow-hidden opacity-60 flex flex-col justify-between relative group">
+                    <div class="relative h-96 overflow-hidden bg-black/40">
+                        <img 
+                            src="https://upload.wikimedia.org/wikipedia/en/4/46/Grand_Theft_Auto_VI.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled" 
+                            alt="GTA VI" 
+                            class="w-full h-full object-cover grayscale opacity-50"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                        <div class="absolute top-3 right-3 bg-white/10 backdrop-blur-md text-slate-300 text-xs px-2.5 py-1 rounded-md font-semibold">
+                            COMING SOON
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4 bg-cardBg/50">
+                        <div>
+                            <h3 class="text-xl font-bold uppercase tracking-wide text-slate-400">Grand Theft Auto VI</h3>
+                            <p class="text-slate-500 text-sm">Action / Open World</p>
+                        </div>
+                        <button disabled class="w-full py-3.5 rounded-xl bg-white/5 text-slate-500 font-bold text-base uppercase cursor-not-allowed border border-white/5">
+                            LOCKED
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Placeholder Card 2: Cyberpunk 2077 -->
+                <div class="bg-cardBg/50 rounded-2xl border border-white/5 overflow-hidden opacity-60 flex flex-col justify-between relative group">
+                    <div class="relative h-96 overflow-hidden bg-black/40">
+                        <img 
+                            src="https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original" 
+                            alt="Cyberpunk 2077" 
+                            class="w-full h-full object-cover grayscale opacity-50"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                        <div class="absolute top-3 right-3 bg-white/10 backdrop-blur-md text-slate-300 text-xs px-2.5 py-1 rounded-md font-semibold">
+                            COMING SOON
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4 bg-cardBg/50">
+                        <div>
+                            <h3 class="text-xl font-bold uppercase tracking-wide text-slate-400">Cyberpunk 2077</h3>
+                            <p class="text-slate-500 text-sm">RPG / Sci-Fi</p>
+                        </div>
+                        <button disabled class="w-full py-3.5 rounded-xl bg-white/5 text-slate-500 font-bold text-base uppercase cursor-not-allowed border border-white/5">
+                            LOCKED
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Placeholder Card 3: Valorant -->
+                <div class="bg-cardBg/50 rounded-2xl border border-white/5 overflow-hidden opacity-60 flex flex-col justify-between relative group">
+                    <div class="relative h-96 overflow-hidden bg-black/40">
+                        <img 
+                            src="https://i.pinimg.com/736x/79/aa/f7/79aaf76e647b1eac1329b41a661ab60d.jpg" 
+                            alt="Valorant" 
+                            class="w-full h-full object-cover grayscale opacity-50"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+                        <div class="absolute top-3 right-3 bg-white/10 backdrop-blur-md text-slate-300 text-xs px-2.5 py-1 rounded-md font-semibold">
+                            COMING SOON
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4 bg-cardBg/50">
+                        <div>
+                            <h3 class="text-xl font-bold uppercase tracking-wide text-slate-400">Valorant</h3>
+                            <p class="text-slate-500 text-sm">Tactical Shooter</p>
+                        </div>
+                        <button disabled class="w-full py-3.5 rounded-xl bg-white/5 text-slate-500 font-bold text-base uppercase cursor-not-allowed border border-white/5">
+                            LOCKED
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-darkBg/90 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-3">
+            <p class="text-lg font-bold tracking-wider text-slate-300">
+                AAAPLAY<span class="text-neonGreen">.LOL</span>
+            </p>
+            <p class="text-xs text-slate-500">
+                © 2026 AAAPLAY.LOL. All game trademarks and artwork belong to their respective publishers.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
